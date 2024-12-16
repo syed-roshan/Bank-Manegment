@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .operations {
+            margin-top: 20px;
+        }
+        .operations form {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bank Operations</h1>
+
+        <div class="operations">
+            <!-- Deposit Section -->
+            <form action="/deposit" method="post">
+                <h2>Deposit</h2>
+                <label for="deposit-amount">Amount:</label>
+                <input type="number" id="deposit-amount" name="deposit_amount" required>
+                <button type="submit">Deposit</button>
+            </form>
+
+            <!-- Withdraw Section -->
+            <form action="/withdraw" method="post">
+                <h2>Withdraw</h2>
+                <label for="withdraw-amount">Amount:</label>
+                <input type="number" id="withdraw-amount" name="withdraw_amount" required>
+                <button type="submit">Withdraw</button>
+            </form>
+
+            <!-- Balance Check Section -->
+            <form action="/balance" method="get">
+                <h2>Check Balance</h2>
+                <button type="submit">View Balance</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
